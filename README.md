@@ -1,5 +1,7 @@
 # 🚀 Angular CRUD Users Project
 
+![Image](https://github.com/user-attachments/assets/6f851cb4-8412-4e72-99fc-fab3a3e1b376)
+
 This is a **full-stack Angular CRUD application** that allows users to **Create, Read, Update, and Delete (CRUD) users** using a **fake API from JSONPlaceholder**. It is built with **Angular Standalone Components**, **HttpClient**, and **Bootstrap** for styling.
 
 ---
