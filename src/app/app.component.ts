@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { UsersComponent } from './users/users.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [UsersComponent],
+  template: '<app-users></app-users>',
 })
-export class AppComponent {
-  title = 'angular-crud';
-}
+export class AppComponent {}
