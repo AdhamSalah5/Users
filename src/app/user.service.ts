@@ -9,28 +9,28 @@ export interface User {
 }
 
 @Injectable({
-  providedIn: 'root' // Automatically provides this service throughout the app
+  providedIn: 'root' 
 })
 export class UserService {
-  private apiUrl = 'https://jsonplaceholder.typicode.com/users'; // Fake API URL
-  private http = inject(HttpClient); // Inject HttpClient for API calls
+  private apiUrl = 'https://jsonplaceholder.typicode.com/users'; 
+  private http = inject(HttpClient); 
 
-  // Fetch all users (READ)
+  
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.apiUrl);
   }
 
-  // Add a new user (CREATE)
+  
   addUser(user: User): Observable<User> {
     return this.http.post<User>(this.apiUrl, user);
   }
 
-  // Update an existing user (UPDATE)
+  
   updateUser(user: User): Observable<User> {
     return this.http.put<User>(`${this.apiUrl}/${user.id}`, user);
   }
 
-  // Delete a user (DELETE)
+  
   deleteUser(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
